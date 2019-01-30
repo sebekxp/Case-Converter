@@ -1,1 +1,1 @@
-#### You can see preview on: https://sebekxp.github.io./
+#### You can see preview on: https://sebekxp.github.io/Case-Converter/
