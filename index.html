@@ -12,9 +12,10 @@
 </head>
 
 <body>
-    <h1>Case Converter konwertuje dowolny tekst</h1>
+    <!-- <h1>Case conventer converts any text</h1> -->
+    <h1>Konwertuj dowolny tekst</h1>
     <div class="cont">
-        <textarea rows="25" cols="75" id="textArea">Type or paste your text here </textarea>
+        <textarea rows="25" cols="75" id="textArea"  placeholder="Wpisz lub wklej twój tekst tutaj..." autofocus></textarea>
         <div class="side-menu">
             <button class="btn1" type="button">UPPER CASE<span>U</span></button>
             <button class="btn2" type="button">lower case<span>L</span></button>
@@ -22,9 +23,21 @@
             <button class="btn4" type="button">Title Case<span>T</span></button>
             <button class="btn5" type="button">CamelCase<span>C</span></button>
             <button class="btn6" type="button">Erase text<i class="fas fa-trash"></i></button>
-            <!-- <button class="btn6" type="button" onclick="LowerCamelCase()">lowerCamelCase <i class="fas fa-grin-stars"></i></button> -->
         </div>
     </div>
+
+    <div class="count">
+        <div class="count-connected count-connected-first">
+            <p>Liczba znaków:</p>
+            <div id="count-letter">0</div>
+        </div>
+        <div class="count-connected count-connected-second">
+            <p>Liczba słów:</p>
+            <div id="count-word">0</div>
+        </div>
+    
+    </div>
+
     <script src="script.js"></script>
 
 </body>
