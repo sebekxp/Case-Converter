@@ -1,17 +1,23 @@
 body{
-    padding: 0;
     margin: 0;
+    padding: 0;
     background-color:#2980B9;
 }
+
 .cont{
     display: flex;
     justify-content: center;
+}
+.container{
+    width: 800px;
+    margin: 0 auto;
 }
 .side-menu{
     width: 0;
 }
 .count{
     display: flex;
+    justify-content: space-between;
 
 }
 .count p{
@@ -32,7 +38,6 @@ body{
 
 .count-connected-first{
     background-color:#FFC930;
-    margin-left:367px;
 }
 .count-connected-second{
     background-color: #58ACE3;
@@ -42,9 +47,8 @@ button:focus{
     outline: none;
 }
 h1{
+    margin: 50px 0;
     text-align: center;
-    margin-top: 40px;
-    display: block;
     font-size: 50px;
     color: #ECF0F1;
 }
@@ -67,7 +71,9 @@ h1{
 .side-menu .btn5{
     background-color: #58ACE3;
 }
-
+.side-menu .btn7{
+    background-color:#FF6530;
+}
 .side-menu .btn6{
     padding-right: 7px; 
     font-size: 16px;
@@ -115,7 +121,6 @@ textarea {
 
 .btnn1{
     width: 30px;
-    margin-left: 355px;
     font-size: 18px;
     font-weight: 800;
     background: transparent;
@@ -131,3 +136,30 @@ textarea {
     background-position: center;    
     background-size: cover;
 }
+/* @media only screen and (max-width: 860px) {
+    body {
+      background-color: red;
+      
+    }
+    .cont{
+        display: block;    
+    }
+    button{
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #2C3E50;
+        font-size: 16px;
+        color: #ECF0F1;
+        width: 160px;
+        height: 30px;
+        border: 1px solid #ECF0F1;
+        border-left: none;
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 6px;
+        transition: 0.7s ease; */
+    }
+  } */

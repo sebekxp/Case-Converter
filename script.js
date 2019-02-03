@@ -26,7 +26,10 @@
         });
         elem.value = elem.value.replace(/ +/g, "");
     }
-
+    function SnakeCase() {
+        elem.value = elem.value.replace(/\s/g, '_');
+    }
+    
     function ClearTextarea() {
         elem.value = "";
         document.querySelector('.btn6').classList.add("animation");
@@ -67,6 +70,7 @@
     document.querySelector(".btn3").addEventListener("click", SentenceCase);
     document.querySelector(".btn4").addEventListener("click", TitleCase);
     document.querySelector(".btn5").addEventListener("click", CamelCase);
+    document.querySelector(".btn7").addEventListener("click", SnakeCase);
     document.querySelector(".btn6").addEventListener("click", ClearTextarea);
    
     /* Counting letter word listener */
@@ -80,7 +84,6 @@
     document.querySelector(".count-connected-second").addEventListener("mouseout", mouseOut);
     
     /* Hoover button effect*/
-    document.querySelector("#btn1").addEventListener("mouseover", () => mouseOverBtn("btn1"));
     document.querySelector("#btn1").addEventListener("mouseout", () => mouseOutBtn("btn1"));
     document.querySelector("#btn2").addEventListener("mouseover", () => mouseOverBtn("btn2"));
     document.querySelector("#btn2").addEventListener("mouseout", () => mouseOutBtn("btn2"));
@@ -92,6 +95,8 @@
     document.querySelector("#btn5").addEventListener("mouseout", () => mouseOutBtn("btn5"));
     document.querySelector("#btn6").addEventListener("mouseover", () => mouseOverBtn("btn6"));
     document.querySelector("#btn6").addEventListener("mouseout", () => mouseOutBtn("btn6"));
+    document.querySelector("#btn7").addEventListener("mouseover", () => mouseOverBtn("btn7"));
+    document.querySelector("#btn7").addEventListener("mouseout", () => mouseOutBtn("btn7"));
     
     /* Performing the function after some time */
     setTimeout(() => changeTimeBtn("btn1"), 500);
@@ -99,7 +104,8 @@
     setTimeout(() => changeTimeBtn("btn3"), 700);
     setTimeout(() => changeTimeBtn("btn4"), 800);
     setTimeout(() => changeTimeBtn("btn5"), 900);
-    setTimeout(() => changeTimeBtn("btn6"), 1000);
+    setTimeout(() => changeTimeBtn("btn7"), 1000);
+    setTimeout(() => changeTimeBtn("btn6"), 1100);
 
     var arrLang = {
         'pl' : {
