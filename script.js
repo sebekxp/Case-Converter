@@ -77,35 +77,71 @@
     elem.addEventListener("input", countLetter);
     elem.addEventListener("input", countWord);
     
-    /* Change color in counting button */
-    document.querySelector(".count-connected-first").addEventListener("mouseover", mouseOver);
-    document.querySelector(".count-connected-first").addEventListener("mouseout", mouseOut);
-    document.querySelector(".count-connected-second").addEventListener("mouseover", mouseOver);
-    document.querySelector(".count-connected-second").addEventListener("mouseout", mouseOut);
-    
     /* Hoover button effect*/
-    document.querySelector("#btn1").addEventListener("mouseout", () => mouseOutBtn("btn1"));
-    document.querySelector("#btn2").addEventListener("mouseover", () => mouseOverBtn("btn2"));
-    document.querySelector("#btn2").addEventListener("mouseout", () => mouseOutBtn("btn2"));
-    document.querySelector("#btn3").addEventListener("mouseover", () => mouseOverBtn("btn3"));
-    document.querySelector("#btn3").addEventListener("mouseout", () => mouseOutBtn("btn3"));
-    document.querySelector("#btn4").addEventListener("mouseover", () => mouseOverBtn("btn4"));
-    document.querySelector("#btn4").addEventListener("mouseout", () => mouseOutBtn("btn4"));
-    document.querySelector("#btn5").addEventListener("mouseover", () => mouseOverBtn("btn5"));
-    document.querySelector("#btn5").addEventListener("mouseout", () => mouseOutBtn("btn5"));
-    document.querySelector("#btn6").addEventListener("mouseover", () => mouseOverBtn("btn6"));
-    document.querySelector("#btn6").addEventListener("mouseout", () => mouseOutBtn("btn6"));
-    document.querySelector("#btn7").addEventListener("mouseover", () => mouseOverBtn("btn7"));
-    document.querySelector("#btn7").addEventListener("mouseout", () => mouseOutBtn("btn7"));
-    
-    /* Performing the function after some time */
-    setTimeout(() => changeTimeBtn("btn1"), 500);
-    setTimeout(() => changeTimeBtn("btn2"), 600);
-    setTimeout(() => changeTimeBtn("btn3"), 700);
-    setTimeout(() => changeTimeBtn("btn4"), 800);
-    setTimeout(() => changeTimeBtn("btn5"), 900);
-    setTimeout(() => changeTimeBtn("btn7"), 1000);
-    setTimeout(() => changeTimeBtn("btn6"), 1100);
+    const maxWidth = 860;
+    function checkWidth(){
+        var widthTmp = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth;
+
+        return widthTmp;
+    }
+    document.querySelector("#btn1").addEventListener("mouseover", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOverBtn("btn1");
+    });
+    document.querySelector("#btn1").addEventListener("mouseout", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOutBtn("btn1");
+    });
+    document.querySelector("#btn2").addEventListener("mouseover", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOverBtn("btn2");
+    });
+    document.querySelector("#btn2").addEventListener("mouseout", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOutBtn("btn2");
+    });
+    document.querySelector("#btn3").addEventListener("mouseover", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOverBtn("btn3");
+    });
+    document.querySelector("#btn3").addEventListener("mouseout", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOutBtn("btn3");
+    });
+    document.querySelector("#btn4").addEventListener("mouseover", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOverBtn("btn4");
+    });
+    document.querySelector("#btn4").addEventListener("mouseout", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOutBtn("btn4");
+    });
+    document.querySelector("#btn5").addEventListener("mouseover", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOverBtn("btn5");
+    });
+    document.querySelector("#btn5").addEventListener("mouseout", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOutBtn("btn5");
+    });
+    document.querySelector("#btn6").addEventListener("mouseover", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOverBtn("btn6");
+    });
+    document.querySelector("#btn6").addEventListener("mouseout", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOutBtn("btn6");
+    });
+    document.querySelector("#btn7").addEventListener("mouseover", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOverBtn("btn7");
+    });
+    document.querySelector("#btn7").addEventListener("mouseout", () => {
+        if(checkWidth() >= maxWidth)
+            mouseOutBtn("btn7");
+    });
 
     var arrLang = {
         'pl' : {
@@ -133,4 +169,31 @@
         });
     });
 
+    if (matchMedia) {
+        const mq = window.matchMedia("(max-width: 860px)");
+        mq.addListener(WidthChange);
+        WidthChange(mq);
+    }
+
+    function WidthChange(mq) {
+        if (mq.matches) {
+            document.querySelector(".btn1").style.transform = "translateX(0)"
+            document.querySelector(".btn2").style.transform = "translateX(0)"
+            document.querySelector(".btn3").style.transform = "translateX(0)"
+            document.querySelector(".btn4").style.transform = "translateX(0)"
+            document.querySelector(".btn5").style.transform = "translateX(0)"
+            document.querySelector(".btn6").style.transform = "translateX(0)"
+            document.querySelector(".btn7").style.transform = "translateX(0)"
+
+        } else {
+            setTimeout(() => changeTimeBtn("btn1"), 500);
+            setTimeout(() => changeTimeBtn("btn2"), 600);
+            setTimeout(() => changeTimeBtn("btn3"), 700);
+            setTimeout(() => changeTimeBtn("btn4"), 800);
+            setTimeout(() => changeTimeBtn("btn5"), 900);
+            setTimeout(() => changeTimeBtn("btn7"), 1000);
+            setTimeout(() => changeTimeBtn("btn6"), 1100);
+        }
+
+    }
 })();

@@ -2,6 +2,7 @@ body{
     margin: 0;
     padding: 0;
     background-color:#2980B9;
+    
 }
 
 .cont{
@@ -9,11 +10,14 @@ body{
     justify-content: center;
 }
 .container{
-    width: 800px;
+    width: 1000px;
     margin: 0 auto;
 }
 .side-menu{
-    width: 0;
+    width: 160px;;
+    display: flex;
+    flex-flow: row wrap;
+    align-self: flex-start;
 }
 .count{
     display: flex;
@@ -26,14 +30,18 @@ body{
 
 .count-connected{
     display: flex;
-    justify-content: center;
-    border: 1px solid #ECF0F1;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgb(253, 253, 253);
     border-radius: 5px; 
     font-weight: 400;
     font-size: 18px;
-    padding: 5px 5px;   
     margin-top: 7px;
-    width: 170px;
+    height: 30px;
+    width: 180px;
+    color:#ECF0F1;
+    font-size: 1em;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
 }
 
 .count-connected-first{
@@ -86,7 +94,7 @@ button{
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px; 
     cursor: pointer;
-    z-index: 2;
+    z-index: 1;
     background-color: #2C3E50;
     font-size: 16px;
     color: #ECF0F1;
@@ -102,7 +110,7 @@ button{
 }
 
 textarea {
-    z-index: 1;
+    z-index: 2;
     resize: none;
     border-radius:5px; 
     background-color: #ECF0F1;
@@ -121,45 +129,58 @@ textarea {
 
 .btnn1{
     width: 30px;
-    font-size: 18px;
-    font-weight: 800;
-    background: transparent;
+
     background:  url("img/1.png");
     background-position: center; 
     background-size: cover;
 }
 .btnn2{
     width: 30px;
-    background-color: darkblue;
     margin-left: 7px;
+    margin-right: 160px;
     background:  url("img/2.png");
     background-position: center;    
     background-size: cover;
 }
-/* @media only screen and (max-width: 860px) {
-    body {
-      background-color: red;
-      
+.groupBtn{
+    display: flex;
+    justify-content: space-between;
+}
+ @media only screen and (max-width: 860px) {
+
+    .cont, .count, .groupBtn, .side-menu {
+        flex-flow: row wrap;
+        justify-content: space-around;
     }
-    .cont{
-        display: block;    
+    .btnn1, .btnn2{
+        width: 37px;
+        height: 37px;
+    }
+    .btnn2{
+        margin: 7px 5px;
     }
     button{
-        margin-top: 5px;
-        margin-bottom: 5px;
-        border-radius: 5px;
-        cursor: pointer;
-        background-color: #2C3E50;
-        font-size: 16px;
-        color: #ECF0F1;
-        width: 160px;
-        height: 30px;
+        width: 182px;
+        height: 37px;
         border: 1px solid #ECF0F1;
-        border-left: none;
-        /* display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 6px;
-        transition: 0.7s ease; */
+        border-radius: 5px;
     }
-  } */
+    .side-menu {
+        justify-content: space-around;
+        flex-flow: row wrap;
+        width: 100%;
+    }
+    .container{
+        width: 85%;
+        }
+    .count-connected{
+        width: 182px;
+        height: 37px;
+    }
+
+}
+@media only screen and (max-width: 440px) {
+    .count-connected-second{
+        margin-left:0;
+     }
+}
