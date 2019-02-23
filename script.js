@@ -32,8 +32,8 @@
     
     function ClearTextarea() {
         elem.value = "";
-        document.querySelector('.btn6').classList.add("animation");
-        setTimeout(() => document.querySelector('.btn6').classList.remove("animation"), 500);
+        document.getElementById('count-letter').innerHTML = 0;
+        document.getElementById('count-word').innerHTML = 0;
     }
     function countLetter() {
         document.getElementById('count-letter').innerHTML = elem.value.length;
